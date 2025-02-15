@@ -3,17 +3,17 @@ const AboutUs = () => {
     {
       name: 'John Doe',
       role: 'CEO & Founder',
-      image: 'https://via.placeholder.com/150',
+      image: 'https://randomuser.me/api/portraits/men/1.jpg',
     },
     {
       name: 'Jane Smith',
       role: 'Chief Data Scientist',
-      image: 'https://via.placeholder.com/150',
+      image: 'https://randomuser.me/api/portraits/women/1.jpg',
     },
     {
       name: 'Alice Johnson',
       role: 'Head of Product',
-      image: 'https://via.placeholder.com/150',
+      image: 'https://randomuser.me/api/portraits/women/2.jpg',
     },
   ];
 
