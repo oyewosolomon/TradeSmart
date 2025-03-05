@@ -1,14 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="bg-white shadow-lg fixed w-full z-50">
+    <nav
+      className={`${
+        isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
+      } fixed w-full z-50 transition-colors duration-300`}
+    >
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
@@ -17,27 +38,58 @@ const Navbar = () => {
             alt="TradeSmart Analytics Logo"
             className="h-10"
           /> */}
-          <span className="ml-2 text-xl font-bold text-blue-900">TradeSmart</span>
+          <span className={`ml-2 text-xl font-bold ${ isScrolled?'text-blue-900':'text-white'} `}>TradeSmart</span>
         </div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 items-center">
-          <a href="#" className="text-blue-900 hover:text-yellow-400 transition duration-300">
+          <a
+            href="#"
+            className={`${
+              isScrolled ? 'text-blue-900' : 'text-white'
+            } hover:text-yellow-400 transition duration-300`}
+          >
             Home
           </a>
-          <a href="#" className="text-blue-900 hover:text-yellow-400 transition duration-300">
+          <a
+            href="#"
+            className={`${
+              isScrolled ? 'text-blue-900' : 'text-white'
+            } hover:text-yellow-400 transition duration-300`}
+          >
             About Us
           </a>
-          <a href="#" className="text-blue-900 hover:text-yellow-400 transition duration-300">
+          <a
+            href="#"
+            className={`${
+              isScrolled ? 'text-blue-900' : 'text-white'
+            } hover:text-yellow-400 transition duration-300`}
+          >
             Products & Services
           </a>
-          <a href="#" className="text-blue-900 hover:text-yellow-400 transition duration-300">
+          <a
+            href="#"
+            className={`${
+              isScrolled ? 'text-blue-900' : 'text-white'
+            } hover:text-yellow-400 transition duration-300`}
+          >
             Resources
           </a>
-          <a href="#" className="text-blue-900 hover:text-yellow-400 transition duration-300">
+          <a
+            href="#"
+            className={`${
+              isScrolled ? 'text-blue-900' : 'text-white'
+            } hover:text-yellow-400 transition duration-300`}
+          >
             Contact Us
           </a>
-          <button className="bg-yellow-400 text-blue-900 font-semibold py-2 px-6 rounded-lg hover:bg-yellow-300 transition duration-300">
+          <button
+            className={`${
+              isScrolled
+                ? 'bg-yellow-400 text-blue-900'
+                : 'bg-yellow-400 text-blue-900'
+            } font-semibold py-2 px-6 rounded-lg hover:bg-yellow-300 transition duration-300`}
+          >
             Get Started
           </button>
         </div>
@@ -46,7 +98,9 @@ const Navbar = () => {
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
-            className="text-blue-900 focus:outline-none"
+            className={`${
+              isScrolled ? 'text-blue-900' : 'text-white'
+            } focus:outline-none`}
           >
             <svg
               className="w-6 h-6"

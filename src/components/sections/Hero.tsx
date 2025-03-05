@@ -3,9 +3,20 @@ import React from 'react';
 const Hero = () => {
   return (
     <div className="relative h-screen flex items-center justify-center text-white overflow-hidden">
-      {/* Background Image with Gradient Overlay */}
+      {/* Background Video */}
+      <video
+        autoPlay
+        muted
+        loop
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/images/bg-vid.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Gradient Overlay */}
       <div
-        className="absolute inset-0 bg-[url('/images/hero-bg.jpg')] bg-cover bg-center"
+        className="absolute inset-0"
         style={{
           backgroundImage: 'linear-gradient(to right, rgba(7, 24, 57, 0.9), rgba(13, 33, 73, 0.8))',
         }}
