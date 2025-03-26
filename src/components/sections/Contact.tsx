@@ -41,16 +41,9 @@ const ContactSection = () => {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <Mail className="h-6 w-6 text-yellow-600 mr-3" />
-                  <span className="text-gray-600">info@tradesmart.com</span>
+                  <span className="text-gray-600">info@tradesmartng.com</span>
                 </div>
-                <div className="flex items-center">
-                  <Phone className="h-6 w-6 text-yellow-600 mr-3" />
-                  <span className="text-gray-600">+234 (555) 123-4567</span>
-                </div>
-                <div className="flex items-center">
-                  <MapPin className="h-6 w-6 text-yellow-600 mr-3" />
-                  <span className="text-gray-600">123 Business Street, Tech City, TC 12345</span>
-                </div>
+                
               </div>
             </div>
 
