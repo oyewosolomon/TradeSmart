@@ -2,13 +2,13 @@ const Testimonials = () => {
   const testimonials = [
     {
       quote: 'TradeSmart Analytics has transformed the way we approach trading. Their AI-driven insights have given us a competitive edge in the market.',
-      name: 'John Doe',
+      name: 'Chukwu Emeka',
       position: 'CEO',
       company: 'Alpha Investments',
     },
     {
       quote: 'The portfolio optimization tools are unparalleled. We’ve seen a significant improvement in our returns.',
-      name: 'Jane Smith',
+      name: 'Badaru',
       position: 'Portfolio Manager',
       company: 'Beta Capital',
     },
