@@ -18,12 +18,10 @@ export default function Home() {
         <Hero />
         <AboutUs />
         <ProductsServices />
-        <Features />
         <IndustriesWeServe />
         <Resources />
         <Testimonials />
         <CTA />
-        <ServicesSection />
         <ContactUs />
         <Footer />
       </div>

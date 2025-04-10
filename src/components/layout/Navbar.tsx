@@ -48,7 +48,7 @@ const Navbar = () => {
             Home
           </a>
           <a
-            href="#"
+            href="#about"
             className={`${
               isScrolled ? 'text-blue-900' : 'text-white'
             } hover:text-yellow-400 transition duration-300`}
@@ -56,7 +56,7 @@ const Navbar = () => {
             About Us
           </a>
           <a
-            href="#"
+            href="#services"
             className={`${
               isScrolled ? 'text-blue-900' : 'text-white'
             } hover:text-yellow-400 transition duration-300`}
@@ -64,7 +64,7 @@ const Navbar = () => {
             Products & Services
           </a>
           <a
-            href="#"
+            href="#resources"
             className={`${
               isScrolled ? 'text-blue-900' : 'text-white'
             } hover:text-yellow-400 transition duration-300`}
@@ -72,7 +72,7 @@ const Navbar = () => {
             Resources
           </a>
           <a
-            href="#"
+            href="#contact"
             className={`${
               isScrolled ? 'text-blue-900' : 'text-white'
             } hover:text-yellow-400 transition duration-300`}
